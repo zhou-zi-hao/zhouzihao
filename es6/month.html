@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+//es6继承
+//     class  Father {
+//         constructor() {
+//            name:"zhou"
+//         }
+//         name = "zhou";
+//         show = function () {
+//            return console.log("这是父亲的东西");
+//         }
+//     }
+//     class Son extends Father {
+//         constructor() {
+//             super();
+//         }
+//     }
+//     var son = new Son()
+//    son.show()
+//     console.log(son.name)
+
+
+    //遍历
+    //     function Parent(){
+    //     }
+    //     Parent.prototype.sex = "01";
+    //     function Second(name,age){
+    //         this.name = name;
+    //         this.age = age;
+    //     }
+    //     Second.prototype = new Parent();
+    //     var obj = new Second("小明",10);
+    //     console.log(obj)
+    //     for (let item in obj){
+    //         console.log(item)
+    //     }
+    //     console.log(Object.keys(obj))
+    //
+    //     for (let item in obj){
+    //         console.log(obj[item])
+    //     }
+    //     console.log(Object.values(obj))
+    //
+
+
+
+
+// function third(name = "tom",age){
+//     var newarr =  Array.from(arguments)
+//    console.log("类数组转数组",newarr)
+//     console.log("",name,age)
+
+//     let [a,b,...args] =  newarr;
+//     console.log(args)
+// }
+// third("zhou",22,"男")
+
+// 4
+    //call  传的参数的形式以 ','分割
+//         function forth(){
+//             console.log(this.a)
+//         }
+//         var obj = {a:"123"};
+//         forth.call(obj)
+ //apply  传的参数的形式为数组
+// function forth(){
+//     console.log(this.a)
+// }
+// var obj = {a:"123"};
+// forth.apply(obj,["aaa","bbb"]);
+
+
+//     5
+// 2>请通过解构获取two并使用别名two2 3分
+// let  fifth = {one:'1',two:'2',three:'3'}
+// let {two:twos} = fifth;
+// console.log(twos)
+
+//  var {three = 4 } = fifth;
+// console.log(three)
+// delete fifth.one;
+// console.log(fifth)
+
+//  6
+// function fix(val){
+//     let NUMBER = isFinite("25");
+//     if(NUMBER){
+//         alert("是纯数字");
+//     }else{
+//         alert("不是纯数字");
+//     }
+//    console.log( val.trimStart())
+//     console.log(val.split(""))
+//     console.log(val.split("").reverse().join(""))
+// }
+//
+// fix("    123456")
+
+//  7
+// function  seven(val){
+//         let NUMBER = Number.isInteger(val);
+//         let NANor = isNaN(val)
+//         if(NUMBER){
+//             alert("是整数");
+//         }else{
+//             alert("不是整数");
+//         }
+//     if(!NANor){
+//         alert("是数字类型");
+//     }else{
+//         alert("不是数字类型");
+//     }
+// }
+// seven(1.22)
+
+
+
+//8
+//
+// var eight = (...val)=>{
+//     console.log(val)
+//     console.log(Object.keys(val))
+// };
+// eight(11,2,3,4,5)
+
+
+// 9
+// function ninth(val){
+//     return `我是${val}`;
+// }
+// console.log(ninth("tom"));
+
+// 10
+var arr = [1,[2,[3,4]]];
+
+oneArr = arr.flat(1);
+allArr = arr.flat(Infinity)
+console.log(oneArr)
+console.log(allArr)
+
+// 11
+// var eleven = {a:"mmm"};
+// var newEleven = eleven;
+// console.log(newEleven)
+// newEleven.a = "zhou";
+// console.log(eleven)
+
+//12
+const mySync = new Promise(function(resolve, reject) {
+
+    if (true){
+        resolve();
+    } else {
+        reject();
+    }
+}).then((res)=>{
+    console.log("success")
+}).catch((res)=>{
+    console.log("erro")
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//12去重
+// var arr2 = [1,1,1,2,2,2,3,3,4,4,5];
+// var newarr = Array.from(new Set(arr2));
+// console.log(newarr)
+
+
+
+
+
+
+
+</script>

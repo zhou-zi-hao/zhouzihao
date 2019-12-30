@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			//原型链继承
+//			function Father(name){
+//				this.name = name;
+//			  }
+//			Father.prototype.show=function(){
+//				console.log(this.name);
+//			  }
+//			
+//			function Son(){
+//
+//			  }
+//			Son.prototype = new Father("suming")
+//			var son1 = new Son()
+//			console.log(son1.name);
+//			son1.show()
+			
+//			function Parent(){
+//			} 
+//			Parent.prototype.sex = '01';
+//			function Second(name,age){
+//			 this.name = name;
+//			 this.age = age;
+//			}
+//			Second.prototype = new Parent();
+//			var obj = new Second("小明",10);
+//			
+//			console.log(obj)
+////			for(let item in obj){
+//	
+//////				console.log(item)
+//////				if(obj.hasOwnProperty(item)){
+//////					console.log(obj[item])
+//////				}
+////	
+////			}
+//			console.log(Object.keys(obj))
+//			
+			
+		//3.如下:
+		// function third(name,age){
+		//}
+		//补全函数
+		//1>打印出函数的实参 2分
+		//2>将函数的实参类数组转换为数组 3分
+		//3>给参数name一个默认值”tom” 2分
+		//4>使用延展和解构获取实参中除了name和age以外的参数,使用变量args来获取 3分
+// 		function third(name,age){
+//// 			var name = name ||"suming"
+//			console.log(Array.from(arguments) instanceof Array)
+// 			var [names,ages,...args] = [...arguments]
+// 			console.log(args)
+//		}
+// 		third(1,2,3,4)
+
+//		  function forth(...reset){
+//			console.log(this,reset)
+//		  }
+//		  var obj = {a:"123"}
+//		  
+//		  forth.call(obj)
+//			forth.apply(obj,["aaa","bbb"])
+
+
+			var fifth = {three:"2"}
+			
+			const {one:one,two:two2,three=4} = fifth
+			delete fifth.three
+			console.log(three)
+			
+			
+			
+
+  function test(){
+    var promise = new Promise(function(res,rej){ res("success")})
+    return promise;
+}
+//1>写一个异步函数 mySync  2分
+//2>在mySync中执行test，当test执行完毕以后mySync返回”success”  3分
+//3>捕获一下函数的异常 2分
+//4>调用mySync以后打印一下其返回值，即”success”  3分
+
+		function mySync(){
+			test().then(function(res){
+				console.log("我是异步的"+res)
+			}).catch((err)=>{
+				
+			})
+		}
+
+			mySync()
+			
+		</script>
+	</body>
+</html>

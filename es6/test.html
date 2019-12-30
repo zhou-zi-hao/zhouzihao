@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../jquery-3.2.1.js"></script>
+    <style>
+
+        .members_content_search{
+            width: 300px;
+            border:1px solid #efefef;
+        }
+        .members_content_search p{
+            line-height: 35px;
+            border-bottom: 1px solid #efefef;
+        }
+    </style>
+</head>
+<body>
+<button style="width: 300px ;padding:8px" class="btn_a">
+    展开下面的内容
+</button>
+<div class="members_content_search">
+    <p>1111</p>
+    <p>222222</p>
+    <p>333333333</p>
+    <p>44444</p>
+    <p>5555555</p>
+    <p>666666666</p>
+    <p>77777</p>
+    <p>88888888</p>
+</div>
+</body>
+</html>
+<script>
+
+    (function () {
+        $(".btn_a").click(function () {
+            $(".members_content_search").slideToggle(2000)
+        })
+    })()
+</script>
+
